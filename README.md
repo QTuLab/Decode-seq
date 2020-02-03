@@ -1,14 +1,17 @@
 # Decode-seq
 
-Decode-seq v1.0, 201904
-
 ## Description
 
-The Decode-seq data analysis pipeline contains 3 python scripts: decode_barcode.py, decode_gene.py, decode_quant.py. We need to run these 3 scripts in sequential order on the input fastq files and the output is the count based quantification matrix, which is ready for downstream analysis by edgeR or DEseq2.
+The Decode-seq data analysis pipeline contains 3 python scripts: decode_barcode.py, decode_gene.py, decode_quant.py. We need to run these three scripts in sequential order on the input fastq files and the output is the count based quantification matrix, which is ready for downstream analysis by edgeR or DEseq2.
 
-- ```decode_barcode.py```
-- ```decode_gene.py```
-- ```decode_quant.py```
+- ```decode_barcode.py```: take Read1 as the input, generate a barcode table (read name, USI, and UMI).
+- ```decode_gene.py```: take Read2 as the input, generate a gene table (read name, transcript).
+- ```decode_quant.py```: take two tables as the input, generate the count matrix (transcript X sample).
+
+## Dependencies
+
+- Python 3
+- [STAR](https://github.com/alexdobin/STAR) 
 
 ## Usage
 
@@ -42,8 +45,6 @@ decode_quant.py
 - -g, --genetable <gene_table>  output of decode_barcode.py
 - -b, --barcodetable <barcode_table> output of decode_gene.py
 - -u, --usi <usifile> A plain text file containing 2 columns:  USI name and 6bp sequence.
-
-## Output files
 
 ## Examples
 
