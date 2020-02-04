@@ -2,7 +2,11 @@
 
 ## Description
 
-The Decode-seq data analysis pipeline contains 3 python scripts: decode_barcode.py, decode_gene.py, decode_quant.py. We need to run these three scripts in sequential order on the input fastq files and the output is the count based quantification matrix, which is ready for downstream analysis by edgeR or DEseq2.
+Decode-seq is an easy and effective RNA-seq approach using molecular barcoding to enable profiling of a large number of replicates simultaneously. This approach significantly improves the performance of differential gene expression analysis. 
+
+The experimental protocol of Decode-seq can be found in ```decode-seq_protocol.pdf```.
+
+The computational analysis pipeline of Decode-seq contains 3 python scripts: decode_barcode.py, decode_gene.py, decode_quant.py. We need to run these three scripts in sequential order on the input fastq files and the output is the count based quantification matrix, which is ready for downstream analysis by edgeR or DEseq2.
 
 - ```decode_barcode.py```: take Read1 as the input, generate a barcode table (read name, USI, and UMI).
 - ```decode_gene.py```: take Read2 as the input, generate a gene table (read name, transcript).
