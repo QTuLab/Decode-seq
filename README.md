@@ -59,3 +59,7 @@ decode_gene.py     -f sample_R2.fq -d star_output_dir -t 30 -x star_index -g ann
 
 decode_quant.py    -b sample.barcode.tab -g sample.gene.tab -u usi.txt > sample.quant.tab
 ```
+
+## Citation
+
+Li Y*, Yang H, Zhang H, Liu Y, Shang H, Zhao H, Zhang T, Tu Q#. 2020. Decode-seq: a practical approach to improve differential gene expression analysis. Genome Biol 21: 66. PMID: 32200760 DOI: [10.1186/s13059-020-01966-9](https://doi.org/10.1186/s13059-020-01966-9)
